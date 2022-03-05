@@ -1,0 +1,10 @@
+---
+IndentWidth: 4
+BasedOnStyle: llvm
+TabWidth: 4
+AllowShortIfStatementsOnASingleLine: true
+AllowShortBlocksOnASingleLine: Always
+AllowShortLoopsOnASingleLine: true
+ColumnLimit: 0
+---
+
