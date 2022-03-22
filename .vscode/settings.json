@@ -1,6 +1,24 @@
 {
   "cmake.configureSettings": {
-    "CMAKE_TOOLCHAIN_FILE": "[vcpkg root]/scripts/buildsystems/vcpkg.cmake"
+    "CMAKE_TOOLCHAIN_FILE": "/Users/ryan/vcpkg/scripts/buildsystems/vcpkg.cmake"
   },
-  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+  "files.associations": {
+    "chrono": "cpp",
+    "vector": "cpp",
+    "string": "cpp",
+    "__config": "cpp",
+    "functional": "cpp",
+    "unordered_map": "cpp",
+    "hash_map": "cpp",
+    "list": "cpp",
+    "optional": "cpp",
+    "variant": "cpp",
+    "__bit_reference": "cpp",
+    "__hash_table": "cpp",
+    "__split_buffer": "cpp",
+    "array": "cpp",
+    "initializer_list": "cpp",
+    "string_view": "cpp",
+    "iterator": "cpp"
+  }
 }
