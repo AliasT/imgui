@@ -14,6 +14,8 @@
 #include "./KItem.cc"
 #include <stdio.h>
 
+#include <uwebsockets/App.h>
+
 #endif
 #if defined(IMGUI_IMPL_OPENGL_ES2)
 #include <GLES2/gl2.h>
@@ -27,7 +29,8 @@
 #pragma comment(lib, "legacy_stdio_definitions")
 #endif
 
-static void glfw_error_callback(int error, const char* description) {
+static void
+glfw_error_callback(int error, const char* description) {
     fprintf(stderr, "Glfw Error %d: %s\n", error, description);
 }
 
@@ -37,7 +40,21 @@ int main(int, char**) {
     if (!glfwInit())
         return 1;
 
-        // Decide GL+GLSL versions
+    /* Overly simple hello world app */
+    uWS::App()
+        .get("/*", [](auto* res, auto* /*req*/) {
+            res->end("Hello world!");
+        })
+        .listen(3000, [](auto* listen_socket) {
+            if (listen_socket) {
+                std::cout << "Listening on port " << 3000 << std::endl;
+            }
+        })
+        .run();
+
+    std::cout << "Failed to listen on port 3000" << std::endl;
+
+    // Decide GL+GLSL versions
 #if defined(IMGUI_IMPL_OPENGL_ES2)
     // GL ES 2.0 + GLSL 100
     const char* glsl_version = "#version 100";
