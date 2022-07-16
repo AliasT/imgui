@@ -3,6 +3,8 @@
     "CMAKE_TOOLCHAIN_FILE": "/Users/ryan/vcpkg/scripts/buildsystems/vcpkg.cmake"
   },
   "files.associations": {
+    "*.excalidraw": "json",
+    "*.excalidrawlib": "json",
     "chrono": "cpp",
     "vector": "cpp",
     "string": "cpp",
@@ -19,6 +21,7 @@
     "array": "cpp",
     "initializer_list": "cpp",
     "string_view": "cpp",
-    "iterator": "cpp"
+    "iterator": "cpp",
+    "thread": "cpp"
   }
 }
